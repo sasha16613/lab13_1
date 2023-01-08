@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lab13_1.ClientPage" Title="Информация о друге">
+    <StackLayout>
+        <Label Text="Имя" />
+        <Entry x:Name = "ClientName" 
+               Text ="{Binding Name}" />
+        <Label Text="Surname" />
+        <Entry x:Name= "ClientSurname"
+            Text="{Binding Surname}" />
+        
+        <Label Text="Ticket price" />
+        <Entry x:Name= "TourPrice"
+            Text="{Binding Price}" />
+        <Label Text="Country" />
+        <Entry x:Name= "TourCountry"
+            Text="{Binding Country}" />
+
+        <Label Text="Visa name" />
+        <Entry x:Name= "VisaName"
+            Text="{Binding VisaName}" />
+        <Label Text="Visa price" />
+        <Entry x:Name= "VisaPrice"
+            Text="{Binding VisaPrice}" />
+        
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Сохранить" Clicked="SaveClient" />
+            <Button Text="Удалить" Clicked="DeleteClient" />
+            <Button Text="Отмена" Clicked="Cancel" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
